@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gerador de Wallpaper Personalizado</title>
+
+    <meta name="description" content="Gere wallpapers personalizados a partir de qualquer imagem. Extraia a paleta de cores, crie fundos 1080×1920 minimalistas e baixe em PNG.">
+    <meta name="keywords" content="wallpaper, gerador de papel de parede, paleta de cores, imagem, PNG, 1080x1920, personalizado">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://seu-dominio.com/">
+    <meta name="theme-color" content="#3B82F6">
+
+        <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Gerador de Wallpaper Personalizado">
+    <meta property="og:title" content="Gerador de Wallpaper Personalizado">
+    <meta property="og:description" content="Crie wallpapers personalizados com paleta de cores de qualquer imagem.">
+    <meta property="og:url" content="https://seu-dominio.com/">
+    <meta property="og:image" content="https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg">
+    <meta property="og:image:alt" content="Wallpaper personalizado">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+        <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gerador de Wallpaper Personalizado">
+    <meta name="twitter:description" content="Crie wallpapers personalizados com paleta de cores de qualquer imagem.">
+    <meta name="twitter:image" content="https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg">
+    <meta name="twitter:image:alt" content="Wallpaper personalizado">
+
+        <link rel="icon" type="image/png" href="https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Gerador de Wallpaper Personalizado",
+        "url": "https://seu-dominio.com/",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Web",
+        "description": "Gere wallpapers personalizados a partir de qualquer imagem e baixe em PNG.",
+        "inLanguage": "pt-BR"
+      }
+    </script>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="header">
+                <h1>Gerador de Wallpaper Personalizado</h1>
+                <p>Crie wallpapers personalizados com paleta de cores extraída de qualquer imagem</p>
+            </div>
+
+            <div class="main-content">
+                <div class="left-panel" aria-labelledby="leftPanelHeading">
+                    <h2 id="leftPanelHeading" class="sr-only">Controles</h2>
+
+                    <div class="input-group">
+                        <label for="imageUpload">Selecionar Imagem</label>
+                        <input type="file" id="imageUpload" accept="image/*" aria-describedby="imageHelp" />
+                        <small id="imageHelp" class="help-text">Aceita formatos: JPG, PNG, WebP. Máximo 10MB.</small>
+                    </div>
+
+                    <div class="text-inputs">
+                        <h3>Textos Personalizados</h3>
+                        <div class="input-group">
+                            <label for="titleText">Título Principal</label>
+                            <input type="text" id="titleText" placeholder="TOKYO" maxlength="50" />
+                        </div>
+                        <div class="input-group">
+                            <label for="subtitleText">Subtítulo</label>
+                            <input type="text" id="subtitleText" placeholder="JAPÃO" maxlength="50" />
+                        </div>
+                        <div class="input-group">
+                            <label for="durationText">Ano/Data</label>
+                            <input type="text" id="durationText" placeholder="2024" maxlength="30" />
+                        </div>
+                        <div class="input-group">
+                            <label for="descriptionText">Descrição</label>
+                            <textarea id="descriptionText" placeholder="Uma cidade vibrante onde tradição e modernidade se encontram..." maxlength="300" rows="4"></textarea>
+                        </div>
+                    </div>
+
+                    <button class="btn" id="generateBtn" aria-busy="false">Gerar Wallpaper</button>
+
+                    <div class="error" id="errorMessage" role="alert" aria-live="polite"></div>
+
+                    <div class="customize" id="appearancePanel">
+                        <h3>Aparência</h3>
+                        <div class="grid-2">
+                            <div class="input-group">
+                                <label for="bgColor">Cor de fundo</label>
+                                <input type="color" id="bgColor" value="#000000" />
+                            </div>
+                            <div class="input-group">
+                                <label for="textColor">Cor do texto</label>
+                                <input type="color" id="textColor" value="#ffffff" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="loading" id="loading" aria-live="polite">
+                        <div class="spinner" aria-hidden="true"></div>
+                        <p>Gerando wallpaper...</p>
+                    </div>
+
+                    <!-- <div class="prompt-section">
+                        <h3>Prompt para IA de Imagens</h3>
+                        <textarea id="promptTextarea" class="prompt-textarea" readonly placeholder="O prompt será gerado automaticamente após criar o wallpaper..."></textarea>
+                        <button class="btn btn-secondary" id="copyPromptBtn">Copiar Prompt</button>
+                    </div> -->
+
+                    <div class="how-it-works">
+                        <h3>Como Funciona</h3>
+                        <ol>
+                            <li>Faça upload de uma imagem (JPG, PNG, WebP)</li>
+                            <li>Personalize o título, subtítulo, ano e descrição</li>
+                            <li>A paleta de cores é extraída automaticamente da imagem</li>
+                            <li>Um poster minimalista 1080×1920 é gerado com moldura</li>
+                            <li>Baixe seu poster ou copie o prompt para IA de imagens</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="right-panel">
+                    <canvas id="canvas" width="1080" height="1920" role="img" aria-label="Prévia do wallpaper gerado"></canvas>
+
+                    <div class="metadata" id="metadata" style="display: none;">
+                        <h3>Metadados</h3>
+                        <p><strong>Título:</strong> <span id="metaTitle">-</span></p>
+                        <p><strong>Subtítulo:</strong> <span id="metaArtist">-</span></p>
+                        <p><strong>Info Extra:</strong> <span id="metaDuration">-</span></p>
+                        <p><strong>Cor Dominante:</strong> <span id="metaColor">-</span></p>
+                    </div>
+
+                    <div class="download-btn">
+                        <button class="btn" id="downloadBtn" disabled>Baixar PNG</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
