@@ -1,0 +1,43 @@
+# CromaWall
+
+> Gerador gratuito de wallpapers e posters minimalistas 1080×1920 a partir de qualquer foto.
+
+## O que é
+
+CromaWall é uma ferramenta web gratuita para criar wallpapers e posters personalizados diretamente no navegador. Faça upload de uma foto, personalize os textos e baixe o resultado em PNG — sem cadastro, sem instalação.
+
+## Como funciona
+
+1. Faça upload de uma imagem (JPG, PNG ou WebP, até 10 MB)
+2. Edite o título principal, subtítulo, ano/data e descrição
+3. A paleta de cores é extraída automaticamente da imagem via ColorThief
+4. Um poster minimalista 1080×1920 é renderizado em Canvas no navegador
+5. Ajuste cores de fundo e texto conforme preferir
+6. Clique em "Gerar Wallpaper" e baixe o PNG gratuitamente
+
+## Características técnicas
+
+- **Resolução**: 1080×1920 pixels (Full HD portrait — ideal para celular)
+- **Extração de cores**: ColorThief detecta cor dominante e paleta da imagem
+- **Renderização**: 100% no navegador via Canvas API — nenhum dado enviado a servidores
+- **Formatos aceitos**: JPG, PNG, WebP (máximo 10 MB)
+- **Download**: PNG de alta qualidade
+
+## Casos de uso
+
+- Criar wallpaper de celular com foto de viagem
+- Gerar poster minimalista para decoração
+- Criar fundo personalizado com paleta de cores de uma foto favorita
+
+## Tecnologia
+
+Vite 5, JavaScript vanilla, ColorThief para extração de paleta.
+
+## Preço
+
+Gratuito — sem planos pagos, sem cadastro.
+
+## Links
+
+- App: https://croma-wall.vercel.app
+- Código-fonte: https://github.com/obrenoalvim/cromaWall

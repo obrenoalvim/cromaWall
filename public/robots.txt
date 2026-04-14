@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+
+# AI search bots — allow crawling for citation and indexing
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Block training-only crawlers (Common Crawl)
+User-agent: CCBot
+Disallow: /
+
+Sitemap: https://croma-wall.vercel.app/sitemap.xml
