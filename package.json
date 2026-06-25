@@ -1,14 +1,17 @@
 {
-  "name": "spotify-wallpaper-generator",
+  "name": "croma-wall",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "prettier": "^3.4.0",
     "vite": "^5.4.2"
   },
   "dependencies": {

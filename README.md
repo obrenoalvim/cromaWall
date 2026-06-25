@@ -1,5 +1,7 @@
 # CromaWall — Gerador de Poster/Wallpaper 1080×1920
 
+[![CI](https://github.com/obrenoalvim/cromaWall/actions/workflows/ci.yml/badge.svg)](https://github.com/obrenoalvim/cromaWall/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Aplicação web para criar posters e wallpapers minimalistas (1080×1920) a partir de qualquer imagem. A ferramenta extrai automaticamente a paleta de cores, permite personalizar textos e aparência e exportar o resultado em PNG.
 
 
